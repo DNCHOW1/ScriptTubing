@@ -24,7 +24,7 @@ def hello_gcs(event, context):
         client = storage.Client()
         bucket = client.get_bucket('youtube-subtitles')
     if not db:
-        cred = credentials.Certificate("./transtube-8a8dd-9ad0b308f3aa.json")
+        cred = credentials.Certificate("./...")
         app = firebase_admin.initialize_app(cred)
         db = firestore.client()
         transcripts = db.collection(u"transcripts")
